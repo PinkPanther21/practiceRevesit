@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Dancing+Script:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Italianno&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Spirax&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-Spirax: "Spirax", cursive;
+ 
+}
+@layer base {
+  .perspective-1000 {
+  perspective: 1000px;
+}
+}
