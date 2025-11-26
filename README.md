@@ -50,21 +50,4 @@ Tailwind CSS
 React Router
 Redux Toolkit
 
-📦 Installation
 
-Clone and install:
-
-git clone https://github.com/your-username/animeverse.git
-cd animeverse
-npm install
-
-
-Run development server:
-npm run dev
-
-Build for production:
-npm run build
-
-API:
-
-Jikan Anime API (safe, images + titles)
