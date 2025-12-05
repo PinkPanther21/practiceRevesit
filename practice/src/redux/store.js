@@ -5,7 +5,7 @@ import productsReducer from './productSlice'
 
 const store = configureStore({
   reducer: {
-    // images: imagesReducer,
+   
     products: productsReducer
   },
 })
