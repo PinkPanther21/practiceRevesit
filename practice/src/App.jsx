@@ -1,4 +1,3 @@
-import './App.css'
 import { Navbar } from './components/Navbar'
 import { Route, Routes } from "react-router-dom";
 import Home from './components/Home'
@@ -8,17 +7,17 @@ import Contacts from './components/Contacts'
 function App() {
  return (
   <>
-  <div className='min-w-dvh bg-linear-to-r/srgb from-white to-gray-300'> 
-  
-        <Navbar />
+  <div className="flex flex-col min-h-screen bg-linear-to-r from-white to-gray-300">
+  <Navbar />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-     
-  </div>
+  <main className="grow">
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
+    </Routes>
+  </main>
+</div>
   
   </>
  )

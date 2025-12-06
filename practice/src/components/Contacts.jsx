@@ -7,7 +7,6 @@ export default function Contacts() {
     fname: "",
     lname: "",
     email: "",
-    char: "",
     message: "",
   });
 
@@ -42,15 +41,14 @@ export default function Contacts() {
     e.preventDefault();
     if (validateForm()) {
       notify();
-      // Clear form
-      setFormData({ fname: "", lname: "", email: "", char: "", message: "" });
+      setFormData({ fname: "", lname: "", email: "", message: "" });
       setErrors({});
     }
   };
 
   return (
-    <>
-      <div className="w-3/4 max-w-2xl mx-auto p-6 border rounded-lg shadow-md bg-white text-gray-700">
+    <div className="min-h-screen flex items-center justify-center bg-linear-to-r from-white to-gray-300 p-5">
+      <div className="w-full max-w-2xl p-6 border rounded-lg shadow-md bg-white text-gray-700">
         <h2 className="text-2xl font-bold mb-6 text-center text-indigo-600">
           Contact Us
         </h2>
@@ -71,6 +69,7 @@ export default function Contacts() {
                 <span className="text-red-500 text-sm">{errors.fname}</span>
               )}
             </label>
+
             <label className="flex-1 flex flex-col text-lg">
               Last Name
               <input
@@ -102,8 +101,6 @@ export default function Contacts() {
             )}
           </label>
 
-          
-
           <label className="flex flex-col text-lg">
             Message
             <textarea
@@ -128,6 +125,6 @@ export default function Contacts() {
         </form>
       </div>
       <ToastContainer />
-    </>
+    </div>
   );
 }

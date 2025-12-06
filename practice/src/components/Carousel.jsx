@@ -22,11 +22,11 @@ const data = [
     }
 ];
 
-function NextArrow(props) {
-  const { onClick } = props;
+function NextArrow({ onClick }) {
   return (
     <div
-      className="absolute right-[-50px] top-1/2 -translate-y-1/2 text-indigo-300 text-5xl font-bold cursor-pointer z-50"
+      className="absolute right-2 max-md:right-0 top-1/2 -translate-y-1/2 
+      text-indigo-300 text-4xl max-md:text-2xl cursor-pointer z-50"
       onClick={onClick}
     >
       ❯
@@ -34,17 +34,18 @@ function NextArrow(props) {
   );
 }
 
-function PrevArrow(props) {
-  const { onClick } = props;
+function PrevArrow({ onClick }) {
   return (
     <div
-      className="absolute left-[-50px] top-1/2 -translate-y-1/2 text-indigo-300 text-5xl font-bold cursor-pointer z-50"
+      className="absolute left-2 max-md:left-0 top-1/2 -translate-y-1/2 
+      text-indigo-300 text-4xl max-md:text-2xl cursor-pointer z-50"
       onClick={onClick}
     >
       ❮
     </div>
   );
-}   
+}
+   
 
 export default function Carousel(){
     const settings = {
@@ -68,13 +69,13 @@ export default function Carousel(){
          return (
             <div>
              
-            <div className="flex justify-around w-full">
+            <div className="flex flex-row justify-between items-center w-full gap-6 p-4">
             <div className="flex flex-col gap-8 max-md:gap-2 max-sm:gap-2 max-md:m-2 max-sm:m-2 w-1/2 m-8 p-4">
-                <h2 className="text-4xl font-bold max-md:text-xl max-sm:text-lg">{d.mainHead}</h2>
-                <p className="text-sm font-semibold max-md:text-[8px] max-sm:text-[8px]">{d.info}</p>
+                <h2 className="text-4xl max-md:text-2xl max-sm:text-lg font-bold">{d.mainHead}</h2>
+                <p className="text-base max-md:text-sm max-sm:text-xs font-semibold leading-snug">{d.info}</p>
             </div>
-            <div className='h-[340px] w-[500px]'>          
-                <img src={d.img} alt="imghere" className='h-full max-md:h-1/2 max-sm:h-1/2'/>
+            <div className='h-auto w-[300px] max-md:w-[180px] max-sm:w-[150px] flex justify-center'>          
+                <img src={d.img} alt="imghere" className='w-full h-auto object-contain'/>
             </div>
             </div>
             </div>
