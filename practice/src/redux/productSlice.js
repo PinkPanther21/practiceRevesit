@@ -7,11 +7,14 @@ export const fetchProducts = createAsyncThunk(
     const res = await fetch(`https://api.jikan.moe/v4/top/anime?page=${page}`);
 
     const data = await res.json();
+    console.log(data)
     
 
-    return data.data.map((anime) => ({
+    return data.data.map((anime,index) => ({
+      id: `${anime.mal_id}-${page}-${index}`,
       title: anime.title,
       img: anime.images.jpg.large_image_url,
+      status:anime.status,      
     }));
   }
 );

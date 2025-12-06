@@ -19,7 +19,7 @@ export default function RecentSearch() {
             key={index}
             className={`w-full h-12 flex items-center gap-3 rounded-xl shadow-lg px-3 ${item.bg} ${item.textColor} hover:scale-105 transition-transform duration-200`}
           >
-            <Search className="min-w-[20px]" />
+            <Search className="min-w-5" />
             <p className="truncate">{item.text}</p>
           </div>
         ))}

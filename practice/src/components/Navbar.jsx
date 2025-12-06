@@ -40,6 +40,17 @@ export function Navbar() {
             >
               Contacts
             </Link>
+            <Link
+              to="/favourites"
+              className="text-lg font-semibold hover:border-b hover:scale-110 transition-all duration-300 ease-in-out"
+            >
+              Favorites
+          {/* {favorites.length > 0 && (
+            <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs rounded-full px-2">
+              {favorites.length}
+            </span>
+          )} */}
+            </Link>
           </div>
 
           <div className="flex gap-5">

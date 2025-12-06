@@ -36,7 +36,7 @@ export default function RightSection() {
             key={index}
             className="flex gap-3 p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200"
           >
-            <img src={card.img} alt={card.title} className="w-16 h-16 object-cover rounded-md flex-shrink-0" />
+            <img src={card.img} alt={card.title} className="w-16 h-16 object-cover rounded-md shrink-0" />
             <div>
               <h3 className="text-lg font-medium">{card.title}</h3>
               <p className="text-sm text-gray-600">{card.desc}</p>
